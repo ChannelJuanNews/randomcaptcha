@@ -1,0 +1,12 @@
+{
+  "name": "randomc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ChannelJuanNews <jruel006@ucr.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mini-svg-data-uri": "^1.2.3",
+    "svg-captcha": "^1.4.0"
+  }
+}

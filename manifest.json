@@ -1,22 +1,14 @@
 {
     "manifest_version": 2,
-    "name": "HideImage",
-    "description": "Blur your image",
+    "name": "Random Captcha",
+    "description": "Guess right and earn points",
     "version": "1",
-    "author": "Nithyanandam",
+    "author": "Juan G. Ruelas Jr.",
     "background": {
       "scripts": ["background.js"],
       "persistent": false
     },
-    "page_action": {
-      "default_popup": "index.html",
-      "default_icon": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
-      }
-    },
+
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
@@ -29,9 +21,14 @@
       "48": "images/get_started48.png",
       "128": "images/get_started128.png"
     },
-    "permissions": ["storage","activeTab","declarativeContent"],
+    "permissions": ["storage","activeTab","declarativeContent", "<all_urls>",  "http://localhost/*", "http://*/*", "http://127.0.0.1/*", "*://127.0.0.1/*"],
     "page_action": {
       "default_title": "HideImage",
       "default_popup": "index.html"
-    }
+    }, 
+
+
+    "host_permissions": [
+      "http://localhost/*", "http://*/*", "http://127.0.0.1/*"
+    ]
 }
